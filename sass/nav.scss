@@ -1,0 +1,46 @@
+.nav-container{
+	height: auto;
+	width: 100%;
+	background-color: $primary-color;
+	padding: 5px;
+	vertical-align: middle;
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+}
+
+.nav-container-fluid{
+    position: relative;
+    float: left;
+}
+
+.nav-items{
+	position: relative;
+	float: left;
+	height: auto;
+}
+
+.nav-items ul{
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.menu-list{
+	padding: 5px!important;
+}
+
+.menu-item {
+	list-style: none;
+	display: block;
+    float: left;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.menu-item a{
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer!important;
+}

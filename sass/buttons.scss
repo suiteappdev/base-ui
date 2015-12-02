@@ -1,0 +1,164 @@
+button[disabled=disabled], button:disabled {
+    background-color: gray;
+    cursor:not-allowed;
+}
+
+.btn[disabled=disabled]{
+    background-color: gray;
+    cursor:not-allowed;
+}
+
+.btn {
+  display: inline-block;
+  padding: 3px 8px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: default;
+  background-image: none;
+  border : 0px;
+
+  &:active{
+
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn.tiny-rounded{
+  border-radius: 5px;
+}
+
+.btn.medium-rounded{
+  border-radius: 10px;
+}
+
+.btn.large-rounded{
+  border-radius: 20px;
+}
+
+.btn.block{
+  width: 100%;
+  display: block;
+}
+
+.btn-mini {
+  padding: 2px 6px;
+}
+
+.btn-large {
+  padding: 6px 12px;
+}
+
+.btn-form {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: $primary-color;
+  border-bottom-color: darken($primary-color, 15%);
+  
+  &:hover {
+    background-color: darken($primary-color, 5.0%);
+    color:white;
+    background-image: none;
+  }
+}
+
+.btn-secondary.transparent{
+  background-color: rgba(255, 0, 0, 0.0);
+  border : 1px solid $dark-color;
+  color: $dark-color;
+  text-shadow: none;
+
+  &:hover {
+    background-color: darken($dark-color, 5.0%);
+    color:white;
+    background-image: none;
+  }
+
+  &:active{
+    background-color: darken($dark-color, 10.0%);
+    color:white;
+    background-image: none; 
+  }
+}
+
+.btn-secondary {
+  color: white;
+  background-color: $dark-color;
+  border-bottom-color: darken($dark-color, 15%);
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+
+  &:active {
+    background-color: darken($dark-color, 5.0%);
+    background-image: none;
+  }
+}
+
+.btn-primary.transparent{
+  background-color: rgba(255, 0, 0, 0.0);
+  border : 1px solid $primary-color;
+  color: $primary-color;
+  text-shadow: none;
+
+  &:hover {
+    background-color: darken($primary-color, 5.0%);
+    border : 1px solid darken($primary-color, 5.0%);
+    color:white;
+    background-image: none;
+  }
+
+  &:active{
+    background-color: darken($primary-color, 10.0%);
+    color:white;
+    border: 1px solid darken($primary-color, 5.0%);
+    background-image: none; 
+  }
+}
+
+// Add the margin next to the icon if there is text in the button too
+.btn .icon {
+  margin-right: 5px;
+}
+
+.dark{
+  background-color: $dark-color;
+  color: white;
+
+  &:hover{
+    background-color: darken($dark-color, 2%);
+  }
+
+  &:active{
+    background-color: darken($dark-color, 5%);
+  }
+}
+
+
+.light{
+  background-color: $light-color;
+  color: $dark-color;
+
+  &:hover{
+    background-color: darken($light-color, 2%);
+  }
+
+  &:active{
+    background-color: darken($light-color, 5%);
+  }
+}
+// This utility class add a down arrow icon to the button
+.btn-dropdown:after {
+  font-family: "photon-entypo";
+  margin-left: 5px;
+  content: '\e873'
+}
