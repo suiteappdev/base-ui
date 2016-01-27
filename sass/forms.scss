@@ -32,7 +32,7 @@ input[type="checkbox"] {
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    background-color: $white;
+    background-color: $light;
     background-image: none;
     cursor: auto;
   &:focus {
@@ -121,7 +121,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label:before {
-  border: 1px solid #ffffff;
+  border: 1px solid $light;
   content: "\00a0";
   display: inline-block;
   font: 16px/1em sans-serif;
@@ -132,6 +132,7 @@ input[type="checkbox"] + label:before {
   width: 16px;
   cursor : pointer;
 }
+
 input[type="checkbox"]:checked + label:before {
   background: $primary-color;
   color: $white;

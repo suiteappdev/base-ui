@@ -1,116 +1,28 @@
-<html>
+<html ng-app="shoply">
   <head>
     <title>base-ui</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma para Comercialización de Productos via Internet" />
+    <meta name="keywords" content="Pedidos, Shoply app , Ecommerce, Suiteapp, Tiempo Real, Businness, app, bodega, punto de venta POS, Vendedores, Rapidez, Soporte 24 horas , la plataforma que cambiara la forma en que se hacen pedidos, desde celulares, Comisiones, ventas, Catalogo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/base-ui.css">
+    <link rel="stylesheet" href="assets/css/base-ui.css">
   </head>
   <body>
-  <nav class="nav-container dark">
-  <div class="onepcssgrid-1200">
-    <div class="onerow">
-      <div class="col4">
-        <h3 class="text-white no-margin no-padding">Shoply</h3>
-      </div>
-      <div class="col4">
-        <div class="nav-container-fluid">
-            <div class="nav-items">
-              <ul class="menu-list">
-                <li class="menu-item"><a href="#" class="strong text-white">HOME</a></li>
-                <li class="menu-item"><a href="#" class="strong text-white">JOBS</a></li>
-                <li class="menu-item"><a href="#" class="strong text-white">GALLERY</a></li>
-                <li class="menu-item"><a href="#" class="strong text-white">CONTACT</a></li>
-              </ul>        
-            </div>
-        </div>        
-      </div>
-      <div class="col4 last">
-          <div class="nav-items right">
-            <ul class="menu-list">
-              <li class="menu-item"><a href="#" class="strong text-white icon icon-twitter"></a></li>
-              <li class="menu-item"><a href="#" class="strong text-white icon icon-facebook"></a></li>
-            </ul>        
-          </div>
-      </div>
-    </div>
-  </div>
-  </nav>
-  <div class="container no-margin no-padding onerow">
-    <div class="container block-1 no-margin no-padding" style="background-image: url(../images/presentation-2.jpg);
-    height: 600px;
-    box-sizing: border-box;
-    background-size: cover;">
-    <div class="onepcssgrid-1200">
-      <div class="onerow">
-        <div class="col12" style="position:relative;top:150px;">
-            <h1 class="text-white text-center">Pedidos de la forma Facil.</h1>
-            <p class="text-white text-center">Ahora podras extender tu mercado de la forma mas practica, Maneja clientes, pedidos y ventas nunca habia sido mas facil.</p>
-            <p class="text-center" style="color:#9A9A9A;"> ó tambien</p>
-            <div class="col6" style="position:relative;top:30px;">
-              <div class="form-group right">
-                <button class="btn btn-primary transparent btn-large icon-text"><i class="icon icon-facebook"></i>facebook</button>
-              </div>
-            </div>
-            <div class="col6 last" style="position:relative;top:30px;">
-              <div class="form-group left">
-                <button class="btn btn-primary transparent btn-large icon-text"><i class="icon icon-twitter"></i>twitter</button>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-  <div class="container">
-      <div class="panel panel-light md">
-        <div class="panel panel-light md">
-          <div class="form-group">
-            <input type="checkbox" id="c1" name="cb">
-            <label for="c1">Option 01</label>
-          </div> 
-          <div class="form-group">
-            <div class="inner-addon left-addon">
-                <i class="icon icon-user"></i>
-                <input type="text" class="form-control" />
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="inner-addon left-addon">
-                <i class="icon icon-user"></i>
-                <input type="text" disabled="disabled" class="form-control" />
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" name="username" value="" class="form-control" placeholder="Username">
-          </div>
-          <div class="form-group">
-            <input type="text" name="username" value="" class="form-control" placeholder="Username">
-          </div>
-          <div class="form-group">
-            <button class="btn btn-primary transparent btn-large icon-text"><i class="icon icon-eye"></i>Button</button>
-            <button class="btn btn-primary btn-large icon-text"><i class="icon icon-eye"></i>Button</button> 
-            <button class="btn btn-secondary btn-large icon-text"><i class="icon icon-eye"></i>Button</button> 
-            <button class="btn btn-secondary transparent btn-large icon-text"><i class="icon icon-eye"></i>Button</button>
-            <button class="btn btn-primary btn-large icon-text medium-rounded"><i class="icon icon-eye"></i>Button</button> 
-          </div>
-          <div class="form-group">
-            <button class="btn btn-primary block btn-large icon-text medium-rounded"><i class="icon icon-eye"></i>Button</button> 
-          </div>
-          <div class="form-group">
-            <button class="btn btn-default btn-large icon-text"><i class="icon icon-note"></i>Button</button> 
-            <button class="btn btn-default btn-large icon-text medium-rounded"><i class="icon icon-note"></i>Button</button> 
-          </div>
-          <div class="form-group">
-            <button class="btn btn-primary block btn-large icon-text medium-rounded"><i class="icon icon-eye"></i>Button</button> 
-          </div>
-        </div>
-        <h1>Shopyfly</h1>
-        <h2>Shopyfly</h2>
-        <h3>Shopyfly</h3>
-        <h4>Shopyfly</h4>
-        <h5>Shopyfly</h5>
-      </div>    
-  </div>
 
+  <!--app angular layout-->
+  <div ng-include="'views/home/header.html'"></div>
+  <div ui-view></div>  
+  <div ng-include="'views/home/footer.html'"></div>
+  <!--app angular layout-->
+
+  <script src="../vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../vendor/angularjs/angular.min.js"></script>
+  <script src="../vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <!--app files-->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/config.routes.js"></script>
+  <!--app-->
+  
   </body>
 </html>

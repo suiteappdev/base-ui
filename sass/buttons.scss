@@ -20,6 +20,7 @@ button[disabled=disabled], button:disabled {
   cursor: default;
   background-image: none;
   border : 0px;
+  cursor: pointer;
 
   &:active{
 

@@ -33,9 +33,9 @@ module.exports = function(grunt) {
             ' * =====================================================\n' +
             ' */\n',
 
-    clean: {
-      dist: ['<%= meta.distPath %>/css', '<%= meta.docsDistPath %>/css']
-    },
+    /*clean: {
+      dist: ['<%= meta.distPath %>/assets', '<%= meta.docsDistPath %>/assets']
+    },*/
 
     sass: {
       options: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       },
       core: {
         src: 'sass/baseui.scss',
-        dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+        dest: '<%= meta.distPath %>assets/css/<%= pkg.name %>.css'
       }
 		},
 
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
         },
         files: {
           src: [
-            '<%= meta.distPath %>css/*.css'
+            '<%= meta.distPath %>assets/css/*.css'
           ]
         }
       }
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       fonts: {
         expand: true,
         src: 'fonts/*',
-        dest: '<%= meta.distPath %>'
+        dest: '<%= meta.distPath %>/assets/'
       }
     },
 
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dist-css', ['sass', 'usebanner', 'cssmin']);
-  grunt.registerTask('dist', ['clean', 'dist-css', 'copy']);
+  grunt.registerTask('dist', ['dist-css', 'copy']);
   grunt.registerTask('server', ['dist','connect', 'watch']);
 
   grunt.registerTask('default', ['dist']);
